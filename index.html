@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SportMate — Your game starts here</title>
+<meta name="description" content="SportMate helps you find sports partners and organise casual games and sessions in Cambridge. Football, tennis, basketball and more — your game starts here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F2350;
+    --ink-deep:#0A1A3E;
+    --accent:#2563EB;
+    --sky:#6AA0FF;
+    --bg:#F4F6FB;
+    --surface:#FFFFFF;
+    --text:#0F172A;
+    --muted:#64748B;
+    --border:#E6EAF2;
+    --display:'Sora',system-ui,sans-serif;
+    --body:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.6}
+
+  /* ---------- header ---------- */
+  header{
+    background:var(--ink);
+    padding:18px 24px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .mark{width:38px;height:38px;flex:none}
+  .wordmark{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:.08em;color:#fff}
+  .wordmark span{color:var(--sky)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:linear-gradient(160deg,var(--ink) 0%,var(--ink-deep) 100%);
+    color:#fff;
+    padding:64px 24px 88px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-logo{width:104px;height:104px;margin:0 auto 20px;display:block}
+  @media (prefers-reduced-motion:no-preference){
+    .fig-left{animation:slideL .8s cubic-bezier(.2,.8,.2,1) both}
+    .fig-right{animation:slideR .8s cubic-bezier(.2,.8,.2,1) both}
+    .fig-dot{animation:pop .5s .55s cubic-bezier(.2,.8,.2,1) both}
+    @keyframes slideL{from{transform:translateX(-26px);opacity:0}to{transform:none;opacity:1}}
+    @keyframes slideR{from{transform:translateX(26px);opacity:0}to{transform:none;opacity:1}}
+    @keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+  }
+  .pill{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:999px;
+    padding:5px 14px;
+    font-size:.8rem;
+    color:#C7D6F5;
+    margin-bottom:22px;
+    letter-spacing:.02em;
+  }
+  .hero h1{
+    font-family:var(--display);font-weight:800;
+    font-size:clamp(2.2rem,6vw,3.4rem);
+    letter-spacing:-.01em;
+    margin-bottom:14px;
+  }
+  .hero p.sub{
+    max-width:34rem;margin:0 auto 34px;
+    color:#C7D6F5;font-size:1.05rem;
+  }
+  .play-btn{
+    display:inline-flex;align-items:center;gap:12px;
+    background:var(--accent);color:#fff;text-decoration:none;
+    font-family:var(--display);font-weight:600;font-size:1rem;
+    padding:15px 28px;border-radius:14px;
+    box-shadow:0 10px 30px rgba(37,99,235,.45);
+    transition:transform .15s,box-shadow .15s;
+  }
+  .play-btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(37,99,235,.55)}
+  .play-btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+  .play-btn svg{width:22px;height:22px;flex:none}
+  .hero .note{margin-top:14px;font-size:.82rem;color:#8FA3C8}
+
+  /* ---------- sports grid (mirrors the app) ---------- */
+  .app-mirror{max-width:820px;margin:-52px auto 0;padding:0 24px 8px;position:relative}
+  .mirror-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:22px;
+    box-shadow:0 24px 60px rgba(15,35,80,.14);
+    padding:34px 30px 30px;
+  }
+  .mirror-card h2{
+    font-family:var(--display);font-weight:800;
+    font-size:1.5rem;margin-bottom:4px;
+  }
+  .mirror-card>p{color:var(--muted);font-size:.95rem;margin-bottom:24px}
+  .sports{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:12px;
+  }
+  .sport{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px 10px 14px;
+    text-align:center;
+    font-weight:600;font-size:.9rem;
+    transition:transform .15s,border-color .15s;
+  }
+  .sport:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .sport .ico{
+    width:46px;height:46px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 10px;font-size:1.35rem;
+  }
+
+  /* ---------- how it works ---------- */
+  .how{max-width:820px;margin:0 auto;padding:64px 24px 8px}
+  .how h2,.features h2{
+    font-family:var(--display);font-weight:800;font-size:1.7rem;
+    text-align:center;margin-bottom:34px;
+  }
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .step{
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:18px;padding:24px 20px;
+  }
+  .step .tag{
+    display:inline-block;background:#EEF3FF;color:var(--accent);
+    font-weight:700;font-size:.78rem;letter-spacing:.06em;
+    border-radius:8px;padding:3px 10px;margin-bottom:12px;
+  }
+  .step h3{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.92rem}
+
+  /* ---------- features ---------- */
+  .features{max-width:820px;margin:0 auto;padding:56px 24px 8px}
+  .feat-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .feat{
+    display:flex;gap:12px;align-items:flex-start;
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:16px;padding:18px;
+  }
+  .feat .dot{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--accent);flex:none;margin-top:7px;
+  }
+  .feat p{font-size:.93rem;color:var(--text)}
+  .feat p b{font-weight:700}
+
+  /* ---------- bottom CTA ---------- */
+  .cta{
+    text-align:center;padding:64px 24px 72px;
+  }
+  .cta h2{font-family:var(--display);font-weight:800;font-size:1.6rem;margin-bottom:10px}
+  .cta p{color:var(--muted);margin-bottom:26px}
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--ink);color:#C7D6F5;
+    padding:28px 24px;text-align:center;font-size:.85rem;
+  }
+  footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  footer a:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
+  footer .row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g transform="translate(100,100) scale(0.82) translate(-100,-100)">
+      <circle cx="58" cy="66" r="13" fill="#2563EB"/>
+      <path d="M40,132 L72,100 L40,100" fill="none" stroke="#2563EB" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="142" cy="66" r="13" fill="#FFFFFF"/>
+      <path d="M160,132 L128,100 L160,100" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="100" cy="116" r="9" fill="#6AA0FF"/>
+    </g>
+  </svg>
+  <div class="wordmark">SPORT<span>MATE</span></div>
+</header>
+
+<section class="hero">
+  <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g transform="translate(100,100) scale(0.95) translate(-100,-100)">
+      <g class="fig-left">
+        <circle cx="58" cy="66" r="13" fill="#2563EB"/>
+        <path d="M40,132 L72,100 L40,100" fill="none" stroke="#2563EB" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g class="fig-right">
+        <circle cx="142" cy="66" r="13" fill="#FFFFFF"/>
+        <path d="M160,132 L128,100 L160,100" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <circle class="fig-dot" cx="100" cy="116" r="9" fill="#6AA0FF"/>
+    </g>
+  </svg>
+
+  <div class="pill">Launching in Cambridge, UK</div>
+  <h1>Your game starts here.</h1>
+  <p class="sub">SportMate helps you find people to play sport with and organise casual games and sessions — whenever it suits you.</p>
+
+  <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.mihaylovdimi.sportmate">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M4 3.5v17c0 .4.4.6.7.4l13.6-8.1c.4-.2.4-.7 0-.9L4.7 3.1c-.3-.2-.7 0-.7.4z" fill="#fff"/>
+    </svg>
+    Get it on Google Play
+  </a>
+  <div class="note">Currently in closed testing — public launch soon.</div>
+</section>
+
+<section class="app-mirror" aria-label="Sports available on SportMate">
+  <div class="mirror-card">
+    <h2>What's your game?</h2>
+    <p>Ten sports, three ways to play — find a partner, organise a match, or join a session.</p>
+    <div class="sports">
+      <div class="sport"><div class="ico" style="background:#E7F6EC">⚽</div>Football</div>
+      <div class="sport"><div class="ico" style="background:#F0F6E4">🎾</div>Tennis</div>
+      <div class="sport"><div class="ico" style="background:#FDEEE2">🏀</div>Basketball</div>
+      <div class="sport"><div class="ico" style="background:#E2F3F1">🏸</div>Badminton</div>
+      <div class="sport"><div class="ico" style="background:#E4EEF9">🏊</div>Swimming</div>
+      <div class="sport"><div class="ico" style="background:#FBE7EB">🏃</div>Running</div>
+      <div class="sport"><div class="ico" style="background:#EFE9FB">🚴</div>Cycling</div>
+      <div class="sport"><div class="ico" style="background:#FFF3D9">🏐</div>Volleyball</div>
+      <div class="sport"><div class="ico" style="background:#E8F1F4">🎯</div>Squash</div>
+      <div class="sport"><div class="ico" style="background:#F3E9E2">🏓</div>Table tennis</div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step">
+      <span class="tag">FIND</span>
+      <h3>Find a partner</h3>
+      <p>Browse players for your sport and start a chat. Perfect for tennis, badminton, squash and table tennis.</p>
+    </div>
+    <div class="step">
+      <span class="tag">ORGANISE</span>
+      <h3>Create a match</h3>
+      <p>Set the place, time and number of players. Split teams fairly with one tap and pick team colours.</p>
+    </div>
+    <div class="step">
+      <span class="tag">PLAY</span>
+      <h3>Chat and play</h3>
+      <p>Every match and session has its own group chat, so everyone stays in the loop. Then just turn up and play.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Built for real, casual sport</h2>
+  <div class="feat-list">
+    <div class="feat"><div class="dot"></div><p><b>You set the time.</b> No fixed weekly slots — play when it suits you.</p></div>
+    <div class="feat"><div class="dot"></div><p><b>Real Cambridge venues.</b> Local courts and pitches, with booking links where available.</p></div>
+    <div class="feat"><div class="dot"></div><p><b>Group chat built in.</b> Organise everything in one place, not across five apps.</p></div>
+    <div class="feat"><div class="dot"></div><p><b>No payments in the app.</b> Where a game has a cost, you pay the organiser directly.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to play?</h2>
+  <p>Join SportMate and find your next game in Cambridge.</p>
+  <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.mihaylovdimi.sportmate">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M4 3.5v17c0 .4.4.6.7.4l13.6-8.1c.4-.2.4-.7 0-.9L4.7 3.1c-.3-.2-.7 0-.7.4z" fill="#fff"/>
+    </svg>
+    Get it on Google Play
+  </a>
+</section>
+
+<footer>
+  <div class="row">
+    <a href="mailto:sportmate.cambridge@gmail.com">Contact</a>
+    <a href="https://gist.github.com/MihaylovDimi/23a6b42de40dfd3f7a1c240ee76f25cd">Privacy Policy</a>
+  </div>
+  <div>© 2026 SportMate · Cambridge, UK · 18+</div>
+</footer>
+
+</body>
+</html>
