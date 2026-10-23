@@ -46,6 +46,47 @@
     overflow:hidden;
   }
   .hero-logo{width:104px;height:104px;margin:0 auto 20px;display:block}
+
+  /* ---------- hero sketch videos ----------
+     Pencil sketch clips play one after another behind the hero text.
+     The clips are black lines on white. invert(1) turns them into white
+     lines on black, and the "screen" blend mode makes the black disappear,
+     so only the white lines show on the navy background.
+     --sketch-opacity is the single knob for how visible they are. */
+  .hero{--sketch-opacity:.09}
+  .hero-sketch{
+    position:absolute;inset:0;z-index:0;
+    pointer-events:none;
+    mix-blend-mode:screen;
+    opacity:var(--sketch-opacity);
+  }
+  .hero-sketch video{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;
+    filter:invert(1);
+    mix-blend-mode:screen; /* lets two clips overlap during the hand-over */
+  }
+  /* On tall, narrow screens (phones) a full "cover" crop would cut off the
+     sides of wide scenes such as table tennis, so show more of the width. */
+  @media (max-aspect-ratio:1/1){
+    .hero-sketch video{
+      width:160%;left:-30%;height:auto;
+      top:50%;bottom:auto;transform:translateY(-50%);
+      aspect-ratio:16/9;object-fit:contain;
+    }
+  }
+  .hero > :not(.hero-sketch){position:relative;z-index:1}
+
+  /* ---------- doodle pattern behind the rest of the page ----------
+     One image with all fifteen sketches, repeated like a chat wallpaper. */
+  .doodles{position:relative;isolation:isolate;display:flow-root}
+  .doodles::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:url(images/doodles.webp) repeat;
+    background-size:850px auto;
+    opacity:.15;
+    pointer-events:none;
+  }
   @media (prefers-reduced-motion:no-preference){
     .fig-left{animation:slideL .8s cubic-bezier(.2,.8,.2,1) both}
     .fig-right{animation:slideR .8s cubic-bezier(.2,.8,.2,1) both}
@@ -203,6 +244,14 @@
 </header>
 
 <section class="hero">
+  <!-- Two video players take turns, so the next clip is already loaded
+       when the current one finishes. The script at the bottom of the page
+       chooses which clip each one plays. -->
+  <div class="hero-sketch" aria-hidden="true">
+    <video muted playsinline preload="auto" poster="images/sketches/poster.jpg"></video>
+    <video muted playsinline preload="none"></video>
+  </div>
+
   <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g transform="translate(100,100) scale(0.95) translate(-100,-100)">
       <g class="fig-left">
@@ -245,6 +294,8 @@
 
   <div class="note">Available now on Google Play. Coming soon to the App Store.</div>
 </section>
+
+<main class="doodles">
 
 <section class="app-mirror" aria-label="Sports available on SportPair">
   <div class="mirror-card">
@@ -334,6 +385,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
     <div class="row">
       <a href="mailto:sportpair@gmail.com">sportpair@gmail.com</a>
@@ -343,6 +396,77 @@
     </div>
     <div>&copy; 2026 SportPair &middot; Cambridge, UK &middot; 18+</div>
 </footer>
+
+<script>
+/* Hero sketch rotation.
+   To change a sport's clip, replace its file in images/sketches/ and keep
+   the same name. To change the order, reorder this list. */
+const SKETCHES = [
+  'football', 'tennis', 'rowing', 'basketball', 'swimming',
+  'badminton', 'cycling', 'volleyball', 'kayaking', 'table-tennis',
+  'running', 'squash', 'paddleboarding', 'gym', 'hiking'
+];
+const HANDOVER = 0.6; // seconds of overlap between one clip and the next
+
+(function () {
+  const box = document.querySelector('.hero-sketch');
+  if (!box) return;
+
+  // Respect people who turned animations off, and people on data saver.
+  // They see the still poster instead.
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = navigator.connection && navigator.connection.saveData;
+  if (reduce || saveData) return;
+
+  const players = box.querySelectorAll('video');
+  let current = players[0];
+  let next = players[1];
+  let index = 0;
+
+  function load(video, i) {
+    video.dataset.handed = '';
+    video.preload = 'auto';
+    video.src = 'images/sketches/' + SKETCHES[i % SKETCHES.length] + '.mp4';
+    video.load();
+  }
+
+  // Start the next clip and swap roles. The clip that just finished then
+  // loads the one after, ready for the following hand-over.
+  function handOver() {
+    if (current.dataset.handed) return;
+    current.dataset.handed = '1';
+    const finished = current;
+    next.currentTime = 0;
+    next.play().catch(function () {});
+    current = next;
+    next = finished;
+    index += 1;
+    const upcoming = index + 1;
+    finished.addEventListener('ended', function () { load(finished, upcoming); }, { once: true });
+  }
+
+  players.forEach(function (video) {
+    video.addEventListener('timeupdate', function () {
+      if (video === current && video.duration - video.currentTime < HANDOVER) handOver();
+    });
+    video.addEventListener('ended', function () {
+      if (video === current) handOver();
+    });
+  });
+
+  load(current, 0);
+  load(next, 1);
+  current.play().catch(function () {});
+
+  // Pause while the hero is scrolled out of view, to save battery.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) current.play().catch(function () {});
+      else current.pause();
+    }).observe(box);
+  }
+})();
+</script>
 
 </body>
 </html>
