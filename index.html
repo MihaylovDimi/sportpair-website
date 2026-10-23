@@ -419,6 +419,7 @@ const HANDOVER = 0.6; // seconds of overlap between one clip and the next
   if (reduce || saveData) return;
 
   const players = box.querySelectorAll('video');
+   players[0].removeAttribute('poster'); // the still is only for people who turned animations off
   let current = players[0];
   let next = players[1];
   let index = 0;
