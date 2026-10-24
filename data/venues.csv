@@ -1,0 +1,137 @@
+id,name,sport,latitude,longitude,bookingUrl,membersOnly,source
+manual-kelsey-badminton,Kelsey Kerridge Sports Centre,badminton,52.2025,0.1245,https://kelseykerridge.co.uk/sports-facilities/,,manual
+osm-node-10700790375-gym,AlphaFit Performance Centre,gym,52.2371082,0.1573031,https://alphafitcambridge.com/,,osm
+osm-node-10728441926-table-tennis,"Table tennis table, Market Square",table-tennis,52.2181639,0.0872714,,,osm
+osm-node-10895936716-basketball,"Basketball court, The Tins",basketball,52.1932835,0.1708655,,,osm
+osm-node-11198393217-gym,OUTTRAIN,gym,52.1938817,0.0970964,https://www.outtrain.co.uk/,,osm
+osm-node-11246860118-gym,R3form,gym,52.2118751,0.1798604,https://r3formstudio.co.uk/pricing,,osm
+osm-node-12059194185-gym,R3form,gym,52.2183175,0.0866669,https://r3formstudio.co.uk/pricing,,osm
+osm-node-12304961601-table-tennis,"Table tennis table, Ashcroft Court",table-tennis,52.2315211,0.1267144,,,osm
+osm-node-12304961612-table-tennis,"Table tennis table, Sackville Close",table-tennis,52.2304699,0.1257435,,,osm
+osm-node-12469285768-table-tennis,"Table tennis table, Cowley Road",table-tennis,52.2351821,0.1530241,,,osm
+osm-node-12681650737-table-tennis,Ping Pong Parlour,table-tennis,52.2069985,0.1345315,,,osm
+osm-node-12953682246-running,"Running tracks, Parker's Piece",running,52.2017898,0.1272988,,,osm
+osm-node-1317828228-basketball,Kelsey Kerridge,basketball,52.2010348,0.1302156,https://kelseykerridge.co.uk/sports-facilities/,,osm
+osm-node-1317828228-squash,Kelsey Kerridge,squash,52.2010348,0.1302156,https://kelseykerridge.co.uk/sports-facilities/,,osm
+osm-node-13331818760-table-tennis,"Table tennis tables, Nightingale Recreation Ground",table-tennis,52.1781161,0.1499315,,,osm
+osm-node-1337635785-kayaking,Cambridge Canoe Club,kayaking,52.1961559,0.116567,https://www.cambridgecanoeclub.org.uk/Cms/Spaces/CCC/How+to+Join+the+Club,,osm
+osm-node-13401830129-gym,Latona Studios,gym,52.2191757,0.11627,https://latonaonline.com/pages/cambridge,,osm
+osm-node-13524910878-gym,BCA Fitness,gym,52.2238006,0.1576007,https://www.bcafitness.co.uk/,,osm
+osm-node-13735909696-gym,Club 100,gym,52.2241248,0.1578049,https://club100healthclubs.com/novotel-cambridge,,osm
+osm-node-3788748243-gym,RP Fitness,gym,52.2288326,0.1492529,https://rpfitness.co.uk/membership/,,osm
+osm-node-3883297254-gym,PureGym,gym,52.1904185,0.1371333,https://www.puregym.com/gyms/cambridge-leisure-park/,,osm
+osm-node-3958248482-rowing,Cambridge '99s Rowing Club,rowing,52.2117125,0.1298701,https://www.cambridge99.org/learn-to-rowcox,,osm
+osm-node-5506563127-gym,Satyam Yoga Wellbeing Centre,gym,52.2162064,0.1329709,https://www.wellnessliving.com/signup/satyam_yoga__wellbeing_centre,,osm
+osm-node-6388036976-gym,F45 Training,gym,52.1941345,0.1357839,https://f45training.com/uk/studio/cambridgestation/,,osm
+osm-node-6822401861-gym,Bridge Fitness and Wellbeing,gym,52.2148776,0.1481551,https://bridgefitness.co.uk/facilities/,,osm
+osm-node-7027129336-gym,PureGym,gym,52.20683,0.1353434,https://www.puregym.com/gyms/cambridge-grafton-centre/,,osm
+osm-node-7435723769-gym,The Gym Group,gym,52.2082287,0.1457377,https://www.thegymgroup.com/find-a-gym/cambridge-gyms/cambridge/,,osm
+osm-node-8548186680-table-tennis,"Table tennis tables, Christ's Pieces",table-tennis,52.2056649,0.1247364,,,osm
+osm-node-8938777914-basketball,"Basketball court, Lichfield Park",basketball,52.1888927,0.1509011,,,osm
+osm-node-9628941011-table-tennis,"Table tennis table, Jesus Green",table-tennis,52.2120803,0.1200987,,,osm
+osm-node-9708749647-table-tennis,"Table tennis tables, Donkey's Common",table-tennis,52.2018519,0.1309347,,,osm
+osm-node-9708751056-table-tennis,"Table tennis table, Histon Road Recreation Ground",table-tennis,52.2184075,0.1081614,,,osm
+osm-way-1014912217-basketball,"Basketball court, Coldhams Lane",basketball,52.2053068,0.1512618,,,osm
+osm-way-1027474413-table-tennis,"Table tennis table, Chesterton (Pye's) Recreation Ground",table-tennis,52.2159205,0.1380612,,,osm
+osm-way-112661292-cycling,BMX Park,cycling,52.2083035,0.1553478,,,osm
+osm-way-113203636-football,"Football pitches, Histon Football Club",football,52.2437263,0.114779,https://www.histonfc.co.uk/,,osm
+osm-way-113203636-tennis,"Tennis court, Histon Football Club",tennis,52.2437263,0.114779,https://www.histonfc.co.uk/,,osm
+osm-way-1198426105-basketball,"Basketball court, Hobson's Park",basketball,52.1757205,0.1261903,,,osm
+osm-way-1266560812-football,"Football pitch, Romsey Recreation Ground",football,52.2001996,0.1515191,,,osm
+osm-way-131486777-basketball,"Basketball court, Thorpe Way Recreation Ground",basketball,52.2162438,0.1737134,,,osm
+osm-way-131486777-football,"Football pitch, Thorpe Way Recreation Ground",football,52.2162438,0.1737134,,,osm
+osm-way-1320049449-badminton,The Perse Sports Centre,badminton,52.1798434,0.1363161,https://perseschool.gladstonego.cloud/book,,osm
+osm-way-1320049449-basketball,The Perse Sports Centre,basketball,52.1798434,0.1363161,https://perseschool.gladstonego.cloud/book,,osm
+osm-way-1320049449-football,The Perse Sports Centre,football,52.1798434,0.1363161,https://perseschool.gladstonego.cloud/book,,osm
+osm-way-1320049449-swimming,The Perse Sports Centre,swimming,52.1798434,0.1363161,https://perseschool.gladstonego.cloud/book,,osm
+osm-way-1320049449-tennis,The Perse Sports Centre,tennis,52.1798434,0.1363161,https://perseschool.gladstonego.cloud/book,,osm
+osm-way-1320049449-volleyball,The Perse Sports Centre,volleyball,52.1798434,0.1363161,https://perseschool.gladstonego.cloud/book,,osm
+osm-way-1321703335-cycling,Brown's Field Pump Track,cycling,52.225589,0.145056,,,osm
+osm-way-1321703336-cycling,Pyes Field Pump Track,cycling,52.2157169,0.1381187,,,osm
+osm-way-1321703337-cycling,Trumpington Pump Track,cycling,52.1732586,0.1158187,,,osm
+osm-way-1321807502-cycling,"Cycling tracks, Nuns Way Recreation Ground",cycling,52.2320128,0.1344067,,,osm
+osm-way-1346868011-cycling,"Cycling tracks, Milton Country Park",cycling,52.2354141,0.1651617,,,osm
+osm-way-1359836567-rowing,Newnham College Boat Club,rowing,52.210707,0.1330353,,yes,osm
+osm-way-13988443-rowing,1st & 3rd Trinity Boat Club,rowing,52.2114778,0.1302569,,yes,osm
+osm-way-13988468-rowing,St. Catharine's College Boat Club,rowing,52.2113428,0.130511,,yes,osm
+osm-way-13988679-rowing,City of Cambridge Rowing Club,rowing,52.2116209,0.1300146,https://www.cityrc.co.uk/learn-to-row,,osm
+osm-way-13989043-rowing,Goldie Boathouse (University of Cambridge Boat Club),rowing,52.2112082,0.1308047,,yes,osm
+osm-way-13989074-rowing,Jesus College Boat Club,rowing,52.2110299,0.131348,,yes,osm
+osm-way-13989400-rowing,Trinity Hall Boat Club,rowing,52.2109216,0.1318374,,yes,osm
+osm-way-13989501-rowing,"Corpus Christi, Girton, Sidney Sussex and Wolfson College Boat Clubs",rowing,52.2108261,0.1324224,,yes,osm
+osm-way-13990426-rowing,Emmanuel Boat Club,rowing,52.2107968,0.134556,,yes,osm
+osm-way-13990439-rowing,Downing College Boat Club,rowing,52.2108115,0.135115,,yes,osm
+osm-way-140107924-basketball,"Basketball court, Sycamores Recreation Ground",basketball,52.239187,0.1533736,,,osm
+osm-way-14019593-rowing,Cambridgeshire Rowing Association,rowing,52.2118342,0.1297691,https://www.crarowing.co.uk/affiliated-clubs,,osm
+osm-way-14022162-rowing,"Churchill, King's, Selwyn College Boat Clubs",rowing,52.2115603,0.1393898,,yes,osm
+osm-way-1429233323-gym,"Gym, The Baulk",gym,52.1938766,0.097063,,,osm
+osm-way-143732859-badminton,Hills Road Sports & Tennis Centre,badminton,52.1865804,0.1340797,https://www.hillsroadsportscentre.co.uk/centre-overview/book-an-activity,,osm
+osm-way-143732859-basketball,Hills Road Sports & Tennis Centre,basketball,52.1865804,0.1340797,https://www.hillsroadsportscentre.co.uk/centre-overview/book-an-activity,,osm
+osm-way-143732859-football,Hills Road Sports & Tennis Centre,football,52.1865804,0.1340797,https://www.hillsroadsportscentre.co.uk/centre-overview/book-an-activity,,osm
+osm-way-143732859-squash,Hills Road Sports & Tennis Centre,squash,52.1865804,0.1340797,https://www.hillsroadsportscentre.co.uk/centre-overview/book-an-activity,,osm
+osm-way-143732859-table-tennis,Hills Road Sports & Tennis Centre,table-tennis,52.1865804,0.1340797,https://www.hillsroadsportscentre.co.uk/centre-overview/book-an-activity,,osm
+osm-way-143732859-tennis,Hills Road Sports & Tennis Centre,tennis,52.1865804,0.1340797,https://www.hillsroadsportscentre.co.uk/centre-overview/book-an-activity,,osm
+osm-way-143732859-volleyball,Hills Road Sports & Tennis Centre,volleyball,52.1865804,0.1340797,https://www.hillsroadsportscentre.co.uk/centre-overview/book-an-activity,,osm
+osm-way-148617118-football,"Football pitch, Cranmer Road",football,52.2027536,0.1026199,,,osm
+osm-way-148825581-swimming,Chesterton Sports Centre,swimming,52.2175048,0.1216342,https://active.tela.org.uk/chesterton/memberships/online-services/,,osm
+osm-way-1509316431-football,"Football pitches, The Plains",football,52.2151845,0.1868704,,,osm
+osm-way-161748246-tennis,University Tennis Club,tennis,52.1990351,0.1323372,https://cultc.soc.srcf.net/join-the-club/,,osm
+osm-way-179268381-basketball,"Basketball courts, Trumpington Recreation Ground",basketball,52.1734098,0.1162749,,,osm
+osm-way-179268423-tennis,"Tennis court, Trumpington Recreation Ground",tennis,52.1738188,0.1155485,,,osm
+osm-way-186532805-swimming,King's Hedges Learner's Pool,swimming,52.2311363,0.1223773,https://www.better.org.uk/leisure-centre/cambridge/kingshedgeslearnerpool/activities,,osm
+osm-way-191274822-basketball,"Basketball court, Histon Interchange",basketball,52.2343955,0.1141996,,,osm
+osm-way-200076804-tennis,"Tennis court, Nightingale Recreation Ground",tennis,52.1767437,0.1493676,https://clubspark.lta.org.uk/nightingale-recreation-ground/Booking,,osm
+osm-way-206298056-football,"Football pitch, Topper Street",football,52.2352677,0.1235451,,,osm
+osm-way-221319778-football,"Football pitch, Trumpington Recreation Ground",football,52.1725765,0.1166639,,,osm
+osm-way-23442029-tennis,Cambridge Lawn Tennis Club,tennis,52.2084557,0.0962136,https://clubspark.lta.org.uk/CambridgeLawnTennisClub/Membership/Join,,osm
+osm-way-23793778-swimming,Jesus Green Lido,swimming,52.2129846,0.1232617,https://www.better.org.uk/leisure-centre/cambridge/jesusgreenlido,,osm
+osm-way-23794630-tennis,"Tennis court, Cherry Hinton Hall",tennis,52.1874725,0.1636356,,,osm
+osm-way-242249063-football,"Football pitch, St Albans Recreation Ground",football,52.2300175,0.1193707,,,osm
+osm-way-262290086-basketball,"Basketball court, Saint Matthew's Piece",basketball,52.2067796,0.1402923,,,osm
+osm-way-275678310-tennis,"Tennis court, Girton Recreational Ground",tennis,52.2399896,0.085454,https://girtontennisclub.uk/membership/,,osm
+osm-way-27769797-swimming,Sheeps Green Learner Pool,swimming,52.1959749,0.1164875,,,osm
+osm-way-289755907-rowing,Fitzwilliam College Boat Club,rowing,52.2119386,0.1295431,,yes,osm
+osm-way-29262824-gym,Nuffield Health Fitness & Wellbeing,gym,52.206343,0.1480033,https://www.nuffieldhealth.com/gyms/cambridge,,osm
+osm-way-305516902-football,"Football pitch, Fen Ditton Recreation Ground",football,52.2238454,0.1701639,,,osm
+osm-way-305516903-basketball,"Basketball court, Fen Ditton Recreation Ground",basketball,52.2235996,0.1691837,,,osm
+osm-way-347641922-football,"Football pitches, Coldham's Common",football,52.2058828,0.1582479,,,osm
+osm-way-347641924-football,"Football pitch, Coldham's Common",football,52.2068937,0.1573873,,,osm
+osm-way-351672987-basketball,"Basketball court, Kestrel Rise",basketball,52.1694224,0.1066325,,,osm
+osm-way-359851852-basketball,Nightingale Park MUGA,basketball,52.1769388,0.1490886,,,osm
+osm-way-369860273-football,"Football pitch, Logan's Meadow",football,52.2138537,0.141401,,,osm
+osm-way-373425465-football,"Football pitch, Marmalade Street",football,52.2368193,0.1376265,,,osm
+osm-way-3752658-football,"Football pitch, Pool Way",football,52.2089517,0.1527545,,,osm
+osm-way-3986794-swimming,Parkside Pools,swimming,52.2014958,0.131099,https://bookings.better.org.uk/location/parkside-pools-and-gym/swimming,,osm
+osm-way-3993003-tennis,"Tennis courts, Jesus Green",tennis,52.2117147,0.1195287,https://clubspark.lta.org.uk/JesusGreen/Booking/BookByDate,,osm
+osm-way-3997810-tennis,"Tennis court, Lammas Land",tennis,52.1977741,0.1132478,,,osm
+osm-way-48205171-gym,Revolution Health and Fitness,gym,52.2319244,0.1464997,https://secure17.clubwise.com/revolutionhealthandfitnesscentre/pos.asp,,osm
+osm-way-48470738-gym,Everlast Gyms,gym,52.2044441,0.1429552,https://www.everlastgyms.com/join-now/cambridge/,,osm
+osm-way-48672457-tennis,"Tennis courts, Christ's Pieces",tennis,52.2069709,0.1248579,https://clubspark.lta.org.uk/christs-pieces,,osm
+osm-way-492844956-football,"Football pitch, T-Swing Park",football,52.2456751,0.1575162,,,osm
+osm-way-501347060-football,"Football pitches, Huntingdon Road Sports Fields",football,52.2212652,0.0913655,,,osm
+osm-way-511772388-badminton,David Lloyd Cambridge,badminton,52.1939255,0.1670075,https://www.davidlloyd.co.uk/clubs/cambridge/join-online/,,osm
+osm-way-511772388-cycling,David Lloyd Cambridge,cycling,52.1939255,0.1670075,https://www.davidlloyd.co.uk/clubs/cambridge/join-online/,,osm
+osm-way-511772388-gym,David Lloyd Cambridge,gym,52.1939255,0.1670075,https://www.davidlloyd.co.uk/clubs/cambridge/join-online/,,osm
+osm-way-511772388-running,David Lloyd Cambridge,running,52.1939255,0.1670075,https://www.davidlloyd.co.uk/clubs/cambridge/join-online/,,osm
+osm-way-511772388-swimming,David Lloyd Cambridge,swimming,52.1939255,0.1670075,https://www.davidlloyd.co.uk/clubs/cambridge/join-online/,,osm
+osm-way-511772388-tennis,David Lloyd Cambridge,tennis,52.1939255,0.1670075,https://www.davidlloyd.co.uk/clubs/cambridge/join-online/,,osm
+osm-way-517072118-tennis,"Tennis courts, Coleridge Recreation Ground",tennis,52.1918114,0.1458622,https://clubspark.lta.org.uk/coleridge-recreation-ground/Booking/BookByDate,,osm
+osm-way-584876021-football,Two Goal Football Pitch,football,52.2462005,0.1602347,,,osm
+osm-way-584876024-football,Concrete Football Pitch,football,52.2409232,0.1524067,,,osm
+osm-way-584876027-cycling,BMX Track,cycling,52.2354314,0.165238,,,osm
+osm-way-584889181-football,"Football pitches, Sycamores Recreation Ground",football,52.2403872,0.1520411,,,osm
+osm-way-584908219-football,"Football pitches, Coles Road Recreation Ground",football,52.239438,0.1607665,,,osm
+osm-way-602497588-tennis,The Cocks and Hens Cambridge Tennis,tennis,52.1940104,0.0953503,https://clubspark.lta.org.uk/cocksandhenstenniscambridge/Membership/Join,,osm
+osm-way-630772818-football,"Football pitches, North Lodge Park",football,52.2442104,0.1721836,,,osm
+osm-way-630772820-football,"Football pitch, Daniels Park",football,52.2441472,0.1689622,,,osm
+osm-way-730167125-basketball,"Basketball court, Histon Road Recreation Ground",basketball,52.2180391,0.1099239,,,osm
+osm-way-730167125-football,"Football pitch, Histon Road Recreation Ground",football,52.2180391,0.1099239,,,osm
+osm-way-737399089-rowing,Camrowers / Cambridgeshire Rowing Association Boathouse,rowing,52.2116142,0.1401082,https://www.camrowers.com/how-to-join-fees/,,osm
+osm-way-801987409-basketball,"Basketball court, Coleridge Recreation Ground",basketball,52.1930304,0.1431551,,,osm
+osm-way-808650245-football,"Football pitches, Chesterton (Pye's) Recreation Ground",football,52.215573,0.1374074,,,osm
+osm-way-905428942-basketball,"Basketball court, Romsey Recreation Ground",basketball,52.2005887,0.1506464,,,osm
+osm-way-905829457-table-tennis,"Table tennis table, Woodpecker Way",table-tennis,52.1760132,0.1222927,,,osm
+osm-way-92414386-tennis,"Tennis courts, New Road",tennis,52.2441865,0.1128607,https://www.histontennisclub.co.uk/membership.html,,osm
+osm-way-92879417-gym,ELA Active Impington,gym,52.2471125,0.1152222,https://active.tela.org.uk/impington/memberships/,,osm
+osm-way-934785299-football,"Football pitches, Coleridge Recreation Ground",football,52.1925973,0.1440316,,,osm
+osm-way-958386797-kayaking,Cambridge University Canoe Club,kayaking,52.1914172,0.1076773,https://www.cucanoe.co.uk/,,osm
