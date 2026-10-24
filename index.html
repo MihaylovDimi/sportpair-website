@@ -115,6 +115,13 @@
     max-width:34rem;margin:0 auto 34px;
     color:#C7D6F5;font-size:1.05rem;
   }
+  .hero p.tagline{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(1.15rem,2.6vw,1.4rem);
+    color:var(--sky);
+    letter-spacing:.04em;
+    margin:0 auto 34px;
+  }
 
   /* Store buttons sit in a row, so a second one can be added later. */
   .store-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -182,6 +189,10 @@
   .how h2,.features h2{
     font-family:var(--display);font-weight:800;font-size:1.7rem;
     text-align:center;margin-bottom:34px;
+  }
+  .section-lead{
+    max-width:34rem;margin:-20px auto 30px;
+    text-align:center;color:var(--muted);font-size:1.05rem;
   }
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
   .step{
@@ -268,7 +279,7 @@
 
   <div class="pill">Now live in Cambridge, UK</div>
   <h1>Your game starts here.</h1>
-  <p class="sub">Ready Steady Match</p>
+  <p class="tagline">Ready Steady Match</p>
 
   <div class="store-row">
     <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.mihaylovdimi.sportmate">
@@ -344,7 +355,7 @@
 
 <section class="features">
   <h2>Built for real, casual sport</h2>
-  <p class="sub">SportPair helps you find people to play sport with and organise casual games and sessions, whenever it suits you.</p>
+  <p class="section-lead">SportPair helps you find people to play sport with and organise casual games and sessions, whenever it suits you.</p>
   <div class="feat-list">
     <div class="feat"><div class="dot"></div><p><b>You set the time.</b> No fixed weekly slots. Say when you are free and let others find you.</p></div>
     <div class="feat"><div class="dot"></div><p><b>Real Cambridge venues.</b> Local courts, pitches and pools on the map, with directions and booking links where available.</p></div>
@@ -420,7 +431,7 @@ const HANDOVER = 0.6; // seconds of overlap between one clip and the next
   if (reduce || saveData) return;
 
   const players = box.querySelectorAll('video');
-   players[0].removeAttribute('poster'); // the still is only for people who turned animations off
+  players[0].removeAttribute('poster'); // the still is only for people who turned animations off
   let current = players[0];
   let next = players[1];
   let index = 0;
