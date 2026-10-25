@@ -209,6 +209,16 @@
   .step h3{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:6px}
   .step p{color:var(--muted);font-size:.92rem}
 
+  /* Screen recordings from the app, shown in a phone frame above each step. */
+  .phone{
+    width:min(190px,70%);aspect-ratio:432/890;
+    margin:0 auto 20px;
+    border:6px solid var(--text);border-radius:28px;
+    background:var(--text);overflow:hidden;
+    box-shadow:0 14px 30px rgba(15,35,80,.18);
+  }
+  .phone video{width:100%;height:100%;object-fit:cover;display:block}
+
   /* ---------- features ---------- */
   .features{max-width:900px;margin:0 auto;padding:56px 24px 8px}
   .feat-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
@@ -338,16 +348,19 @@
   <h2>How it works</h2>
   <div class="steps">
     <div class="step">
+      <div class="phone"><video muted playsinline loop preload="none" data-src="images/how/how-find.mp4" aria-hidden="true"></video></div>
       <span class="tag">FIND</span>
       <h3>Find a partner</h3>
       <p>Browse players for your sport, see their level and when they are free, then start a chat. Perfect for tennis, badminton, squash and table tennis.</p>
     </div>
     <div class="step">
+      <div class="phone"><video muted playsinline loop preload="none" data-src="images/how/how-organise.mp4" aria-hidden="true"></video></div>
       <span class="tag">ORGANISE</span>
       <h3>Create a match</h3>
       <p>Set the place, time and number of players. Split teams fairly with one tap and pick team colours.</p>
     </div>
     <div class="step">
+      <div class="phone"><video muted playsinline loop preload="none" data-src="images/how/how-play.mp4" aria-hidden="true"></video></div>
       <span class="tag">PLAY</span>
       <h3>Chat and play</h3>
       <p>Every match and session has its own group chat, so everyone stays in the loop. Then just turn up and play.</p>
@@ -410,6 +423,35 @@
     </div>
     <div>&copy; 2026 SportPair &middot; Cambridge, UK &middot; 18+</div>
 </footer>
+
+<script>
+/* How it works: each phone loads its clip only when it scrolls into view,
+   plays while visible and pauses when it leaves. People who turned
+   animations off, or use data saver, see one still frame instead. */
+(function () {
+  var clips = document.querySelectorAll('.phone video');
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+              (navigator.connection && navigator.connection.saveData);
+  function start(v) {
+    if (!v.src) {
+      v.src = v.dataset.src;
+      if (still) {
+        v.preload = 'metadata';
+        v.addEventListener('loadedmetadata', function () { v.currentTime = v.duration * 0.6; }, { once: true });
+      }
+    }
+    if (!still) v.play().catch(function () {});
+  }
+  if (!('IntersectionObserver' in window)) { clips.forEach(start); return; }
+  var watcher = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) start(e.target);
+      else if (e.target.src) e.target.pause();
+    });
+  }, { rootMargin: '200px 0px' });
+  clips.forEach(function (v) { watcher.observe(v); });
+})();
+</script>
 
 <script>
 /* Hero sketch rotation.
